@@ -1,4 +1,12 @@
-<h1>I am the new.html.erb file.</h1>
+<h1>Welcome to Forgeddit</h1>
+<h3>Please enter your information below</h3>
 <%= form_for @user do |f| %>
 
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :email   %>
+  <%= f.text_field :email  %>
+
+  <%= f.submit %>
 <% end %>
