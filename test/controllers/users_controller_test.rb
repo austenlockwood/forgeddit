@@ -11,4 +11,10 @@ class UsersControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "can create a new user" do
+    assert_difference "User.count", 1 do
+    post :create, {user: {email: "humanperson@legitpage.com"}}
+    end
+  end
+
 end

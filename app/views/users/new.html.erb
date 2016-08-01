@@ -1,6 +1,6 @@
 <h1>Welcome to Forgeddit</h1>
-<h3>Please enter your information below</h3>
-<%= form_for @user do |f| %>
+<h3>Please enter your information below:</h3>
+<%= form_for @user, url: "/signup" do |f| %>
 
   <%= f.label :name %>
   <%= f.text_field :name %>
