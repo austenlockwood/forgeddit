@@ -34,7 +34,7 @@ class UserTest < ActiveSupport::TestCase
     ryan = User.create!({name: "Ryan", email: "iliveinflorida@lame.com"})
     google = Link.create!({url: "http://google.com", user_id: ryan.id })
     cool_story_bro = Comment.create!({link_id: google.id, text: "I use Google to find things." })
-    assert_equal [cool_story_bro], google.comment
+    assert_equal [cool_story_bro], google.comments
   end
 
   # test "user can have comments" do
